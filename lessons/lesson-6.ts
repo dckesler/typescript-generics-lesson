@@ -5,7 +5,10 @@ type ActionMap = {
   convert: string;
 }
 
-type Dispatch = <Type extends keyof ActionMap, Payload extends ActionMap[Type]>(
+type Dispatch = <
+  Type extends keyof ActionMap,
+  Payload extends ActionMap[Type]
+>(
   type: Type,
   payload: Payload,
 ) => void;
@@ -15,5 +18,5 @@ const dispatch: Dispatch = (type, payload) => {
 };
 
 dispatch('increment', undefined);
+dispatch('increment', 12);
 dispatch('set', 42);
-
