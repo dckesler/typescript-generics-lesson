@@ -18,6 +18,6 @@ export const foo: FooExtendsExtended<string> = {
 
 export const foo2: FooExtendsExtended<number> = {
   record: {
-    oof: 42
+    oof: true
   }
 };
